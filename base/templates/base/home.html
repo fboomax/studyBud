@@ -16,8 +16,15 @@
                 Browse Topics
                 <hr>
                 <div>
+                    <a href="{% url 'home' %}">All</a>
+                </div>
+
+                <div>
                      {% for topic in topics %}
-                         <a href="">{{ topic.name }}</a>
+                         <div>
+                            <a href="{% url 'home' %}?q={{ topic.name }}">{{ topic.name }}</a>
+                         </div>
+
                     {% endfor %}
                 </div>
             </h3>
