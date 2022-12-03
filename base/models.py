@@ -16,6 +16,7 @@ class Room(models.Model):
     # participants=
     update = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+    # photos = models.ImageField()
 
     class Meta:
         ordering = ['-update', '-created']
